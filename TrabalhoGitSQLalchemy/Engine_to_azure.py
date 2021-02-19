@@ -17,7 +17,7 @@ odbc_str = 'DRIVER='+driver+';SERVER='+server+';PORT=1433;UID='+username+';DATAB
 connect_str = 'mssql+pyodbc:///?odbc_connect=' + urllib.parse.quote_plus(odbc_str)
 
 
-engine = create_engine(connect_str, echo=True)
+engine = create_engine(connect_str, echo=False)
 
 Base = declarative_base()
     

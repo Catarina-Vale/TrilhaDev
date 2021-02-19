@@ -3,7 +3,8 @@ from Engine_to_azure import Base
 from sqlalchemy import Column, Integer, String
 
 class Repository(Base):
-    __tablename__ = 'Repositories'
+    __tablename__ = 'repositories'
+    id = Column(Integer, primary_key=True)
     username = Column(String(50))
     reponame = Column(String(50))
 
