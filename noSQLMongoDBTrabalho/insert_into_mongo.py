@@ -1,9 +1,12 @@
-from pymongo import Mongoclient
-from sortstuffout import select_delete_candidates, select_insert_candidates
-client = Mongoclient('mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+from pymongo import MongoClient
 
-db = client.get('Repositories')
-resource = db.Repositories
+from sortstuffout import select_delete_candidates, select_insert_candidates
+
+client = MongoClient("mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+
+db = client.get_database('Repositories')
+
+resource = db.RepoNUser
 
 def insert_repo_and_user(gituser,repolist):
     aquired_repos = []
