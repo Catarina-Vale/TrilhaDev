@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def helloworld():
     print('user accessed mainpage')
-    return "Welcome, bub"
+    return "<h1>Welcome, bub</h1>"
 
 @app.route("/repos", methods = ['GET', 'POST'])
 def mainfunction():
