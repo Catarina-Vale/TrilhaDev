@@ -1,6 +1,6 @@
 from conection import connect_and_provide
 
-from insert_into_amongo import insert_repo_and_user
+from insert_into_mongo import insert_repo_and_user
 
 #Importing both Request and SQL functions to the main function
 def mainfunc(entrada):
