@@ -39,7 +39,7 @@ def put_product(ProductName, Desc, Price):
         if Desc is not None:
             find_them.Description = Desc
         if Price is not None:
-            find_them.Value = Price
+            find_them.Value = float(Price)
         find_them.save()
         return Response('<h1>Product successfully updated</h1>',status=200)
     else:
