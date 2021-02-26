@@ -11,7 +11,7 @@ def get_all_products():
     output = '<h1>Todos os produtos:</h1>'
     for entity in User.objects:
         output += f'<h2>{entity.Name}</h2> <p>Descrição: {entity.Description}</p> <p>Preço: {entity.Value}</p>'
-    output += "<h1>Deseja registrar um valor novo?</h1><form method='POST'><input type='text' name='Name'><input type='text' name='Desc'><input type='number' name='value'><input type='submit'></form>"
+    output += "<h1>Deseja registrar um valor novo?</h1><form method='POST'><input type='text' name='Name'><br><input type='text' name='Desc'><br><input type='number' name='value'><br><input type='submit'></form>"
     return output
 
 def get_single_product(ProductName):
