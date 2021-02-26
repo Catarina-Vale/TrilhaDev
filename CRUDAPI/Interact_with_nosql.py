@@ -11,6 +11,7 @@ def get_all_products():
     output = '<h1>Todos os produtos:</h1>'
     for entity in User.objects:
         output += f'<h2>{entity.Name}</h2> <p>Descrição: {entity.Description}</p> <p>Preço: {entity.Value}</p>'
+    output += "<h1>Deseja registrar um valor novo?</h1><form method='POST'><input type='text' name='Name'><input type='text' name='Desc'><input type='number' name='value'><input type='submit'></form>"
     return output
 
 def get_single_product(ProductName):
@@ -28,7 +29,7 @@ def post_product(ProductName, Desc, Price):
     if find_them is not None:
         return Response('<h1>Product already registered</h1>',status=400)
     else:
-        newuser = User(Name = ProductName, Description = Desc, Value= Price).save()
+        newuser = User(Name = ProductName, Description = Desc, Value= float(Price)).save()
         return Response('<h1>Product successfully registered</h1>', status=200)
 
 def put_product(ProductName, Desc, Price):

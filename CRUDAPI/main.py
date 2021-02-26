@@ -15,9 +15,9 @@ def mainfunction():
         print('user requested all products')
         return Interact_with_nosql.get_all_products()
     elif request.method == 'POST':
-        ProductName = request.args.get('Name')
-        ProductDesc = request.args.get('Desc')
-        ProductValue = request.args.get('Value')
+        ProductName = request.form.get('Name')
+        ProductDesc = request.form.get('Desc')
+        ProductValue = request.form.get('Value')
         if ProductName is None:
             return '<h1>Name is required</h1>'
         print(f'user wants to post product {ProductName}:\n{ProductDesc}\n{ProductValue}')
