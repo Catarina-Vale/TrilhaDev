@@ -18,9 +18,9 @@ def mainfunction():
         ProductName = request.args.get('Name')
         ProductDesc = request.args.get('Desc')
         ProductValue = request.args.get('Value')
+        print(f'user wants to post product {ProductName}:\n{ProductDesc}\n{ProductValue}')
         if ProductName is None:
             return '<h1>Name is required</h1>'
-        print(f'user wants to post product {ProductName}:\n{ProductDesc}\n{ProductValue}')
         return Interact_with_nosql.post_product(ProductName, ProductDesc, ProductValue)
     elif request.method == 'PUT':
         ProductName = request.args.get('Name')
@@ -45,6 +45,6 @@ def individualfunction(product):
         print(f'user wants to delete product {product}')
         return Interact_with_nosql.delete_product(product)
 if __name__ == '__main__':
-    print('listening in port 5000...')
-    app.run(host='0.0.0.0',port=5000)
+    print('listening in port 5002...')
+    app.run(host='0.0.0.0',port=5002)
     print('Shut down')

@@ -18,16 +18,12 @@ def mainfunction():
         ProductName = request.args.get('Name')
         ProductDesc = request.args.get('Desc')
         ProductValue = request.args.get('Value')
-        if ProductName is None:
-            return '<h1>Name is required</h1>'
         print(f'user wants to post product {ProductName}:\n{ProductDesc}\n{ProductValue}')
         return Interact_with_nosql.post_product(ProductName, ProductDesc, ProductValue)
     elif request.method == 'PUT':
         ProductName = request.args.get('Name')
         ProductDesc = request.args.get('Desc')
         ProductValue = request.args.get('Value')
-        if ProductName is None:
-            return '<h1>Name is required</h1>'
         print(f'user wants to update product {ProductName}:\n{ProductDesc}\n{ProductValue}')
         return Interact_with_nosql.put_product(ProductName, ProductDesc, ProductValue)
     elif request.method == 'DELETE':

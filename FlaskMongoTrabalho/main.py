@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def helloworld():
     print('user accessed mainpage')
-    return "<h1>Welcome, bub</h1>"
+    return "Welcome, bub"
 
 @app.route("/repos", methods = ['GET', 'POST'])
 def mainfunction():
@@ -36,6 +36,6 @@ def individualfunction(gituser):
         return Interact_with_nosql.post_repos_and_user(gituser)
 
 if __name__ == '__main__':
-    print('listening in port 5000...')
-    app.run(host='0.0.0.0',port=5000)
+    print('listening in port 8000...')
+    app.run(host='0.0.0.0',port=8000)
     print('Shut down')

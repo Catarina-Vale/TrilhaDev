@@ -1,0 +1,31 @@
+
+
+services:
+
+  main:
+
+    command: python -u main.py
+
+    ports:
+      - '5002:5002'
+      
+    build: .
+
+    links:
+
+      - mongo
+
+  mongo:
+
+    image: mongo:latest
+    hostname: yujo
+
+    environment:  
+      - MONGO_INITDB_ROOT_USERNAME=toot
+      - MONGO_INITDB_ROOT_PASSWORD=root
+      - MONGO_INITDB_DATABASE=user
+      
+    ports: 
+      - 27017:27017
+
+

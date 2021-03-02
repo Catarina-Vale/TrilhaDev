@@ -45,6 +45,6 @@ def individualfunction(product):
         print(f'user wants to delete product {product}')
         return Interact_with_nosql.delete_product(product)
 if __name__ == '__main__':
-    print('listening in port 5000...')
-    app.run(host='0.0.0.0',port=5000)
+    print('listening in port 5001...')
+    app.run(host='0.0.0.0',port=5001)
     print('Shut down')

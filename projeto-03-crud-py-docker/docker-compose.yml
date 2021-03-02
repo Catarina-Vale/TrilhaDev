@@ -1,0 +1,12 @@
+
+
+services:
+
+  main:
+
+    command: python -u main.py
+
+    ports:
+      - '5001:5001'
+      
+    build: .
