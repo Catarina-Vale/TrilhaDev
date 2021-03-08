@@ -11,3 +11,4 @@ class Repository(Base):
     def __init__(self, username, reponame):
         self.username = username
         self.reponame = reponame
+

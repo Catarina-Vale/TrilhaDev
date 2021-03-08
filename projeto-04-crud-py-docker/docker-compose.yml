@@ -1,0 +1,31 @@
+
+
+services:
+
+  main:
+
+    command: python -u main.py
+
+    ports:
+      - '5000:5000'
+      
+    build: .
+
+    links:
+
+      - mongo
+
+  mongo:
+
+    image: mongo:latest
+    hostname: oiojoio
+
+    environment:  
+      - MONGO_INITDB_ROOT_USERNAME=alexandre
+      - MONGO_INITDB_ROOT_PASSWORD=vale
+      - MONGO_INITDB_DATABASE=user
+      
+    ports: 
+      - 27017:27017
+
+
