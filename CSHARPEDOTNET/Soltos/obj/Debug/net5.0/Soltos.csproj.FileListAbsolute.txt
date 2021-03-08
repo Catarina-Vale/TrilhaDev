@@ -1,0 +1,16 @@
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.exe
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.deps.json
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.runtimeconfig.json
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.runtimeconfig.dev.json
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.dll
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\ref\Soltos.dll
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\bin\Debug\net5.0\Soltos.pdb
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.csprojAssemblyReference.cache
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.AssemblyInfoInputs.cache
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.AssemblyInfo.cs
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.csproj.CoreCompileInputs.cache
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.dll
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\ref\Soltos.dll
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.pdb
+C:\Users\v-ale\TrilhaDev\CSHARPEDOTNET\Soltos\obj\Debug\net5.0\Soltos.genruntimeconfig.cache
