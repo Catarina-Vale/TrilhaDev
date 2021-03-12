@@ -20,29 +20,29 @@ namespace MongoReposDOTNET
                 output += entry;
             }
             Console.Write(output);
-            // Console.WriteLine("Novo nome para registro: ");
-            // var newname = Console.ReadLine();
-            // Console.WriteLine("E qual repositorio este pessoa possui?: ");
-            // var newrepo = Console.ReadLine();
-            // var newguy = new BsonDocument{
-            //     {"Usuario", newname},
-            //     {"Repositorio", newrepo},
-            // };
-            // collection.InsertOne(newguy);
+            Console.WriteLine("Novo nome para registro: ");
+            var newname = Console.ReadLine();
+            Console.WriteLine("E qual repositorio este pessoa possui?: ");
+            var newrepo = Console.ReadLine();
+            var newguy = new BsonDocument{
+                {"Usuario", newname},
+                {"Repositorio", newrepo},
+            };
+            collection.InsertOne(newguy);
 
-            // Console.WriteLine("Inserted him nice and easy");
+            Console.WriteLine("Inserted him nice and easy");
 
-            // Console.WriteLine("Nome para pesquisa: ");
-            // var lookforname = Console.ReadLine();
-            // var filter = Builders<BsonDocument>.Filter.Eq("Usuario", lookforname);
+            Console.WriteLine("Nome para pesquisa: ");
+            var lookforname = Console.ReadLine();
+            var filter = Builders<BsonDocument>.Filter.Eq("Usuario", lookforname);
             
-            // var findthem = collection.Find(filter).FirstOrDefault();
-            // if(findthem == null){
-            //     Console.WriteLine("Didnt find the guy :(");
-            // }
-            // else{
-            //     Console.WriteLine($"Found the guy!: {findthem.ToString()}");
-            // }
+            var findthem = collection.Find(filter).FirstOrDefault();
+            if(findthem == null){
+                Console.WriteLine("Didnt find the guy :(");
+            }
+            else{
+                Console.WriteLine($"Found the guy!: {findthem.ToString()}");
+            }
         }
     }
 }
