@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v-ale\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj": {}
+    "C:\\Users\\Alexandre\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v-ale\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj": {
+    "C:\\Users\\Alexandre\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v-ale\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj",
+        "projectUniqueName": "C:\\Users\\Alexandre\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj",
         "projectName": "Soltos",
-        "projectPath": "C:\\Users\\v-ale\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj",
-        "packagesPath": "C:\\Users\\v-ale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v-ale\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\obj\\",
+        "projectPath": "C:\\Users\\Alexandre\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\Soltos.csproj",
+        "packagesPath": "C:\\Users\\Alexandre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexandre\\TrilhaDev\\CSHARPEDOTNET\\Soltos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\v-ale\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
