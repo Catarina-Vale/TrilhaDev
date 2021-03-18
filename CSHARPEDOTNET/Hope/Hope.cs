@@ -20,6 +20,8 @@ namespace Products
     public static class Hope
     {
         static private MongoClient client = new MongoClient("mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        static private IMongoDatabase database = client.GetDatabase("CrudProject");
+        static private IMongoCollection<BsonDocument> collection = database.GetCollection<BsonDocument>("user");
         [FunctionName("Hope")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "hope")] HttpRequest req,
@@ -43,13 +45,13 @@ namespace Products
             ILogger log)
         {
             log.LogInformation("User Requested all products");
-
-            var database = client.GetDatabase("CrudProject");
-
-            var collection = database.GetCollection<BsonDocument>("user");
-
-            var document = collection.Find(new BsonDocument()).ToList();
-
+            
+            // var database = client.GetDatabase("CrudProject");
+            // log.LogInformation(database.typeOf());
+            // var collection = database.GetCollection<BsonDocument>("user");
+            // log.LogInformation(collection.typeOf());
+            var document = await collection.Find(new BsonDocument()).ToListAsync();
+            log.LogInformation("Debug");
             return new OkObjectResult(document);
             
         }
@@ -60,9 +62,9 @@ namespace Products
         {
             log.LogInformation($"User Requested Product named {name} ");
 
-            var database = client.GetDatabase("CrudProject");
+            // var database = client.GetDatabase("CrudProject");
 
-            var collection = database.GetCollection<BsonDocument>("user");
+            // var collection = database.GetCollection<BsonDocument>("user");
 
             var filter = Builders<BsonDocument>.Filter.Eq("Name", name);
             
@@ -86,9 +88,9 @@ namespace Products
 
             log.LogInformation($"User tried to post product:\n Name: {Name} \n Description: {Desc} \n Price: {Value} ");
 
-            var database = client.GetDatabase("CrudProject");
+            // var database = client.GetDatabase("CrudProject");
 
-            var collection = database.GetCollection<BsonDocument>("user");
+            // var collection = database.GetCollection<BsonDocument>("user");
 
             var filter = Builders<BsonDocument>.Filter.Eq("Name", Name);
             
@@ -103,7 +105,7 @@ namespace Products
 
             if(findthem == null){
 
-            collection.InsertOne(newentry);
+            await collection.InsertOneAsync(newentry);
 
             return new OkObjectResult(newentry);
 
@@ -123,9 +125,9 @@ namespace Products
 
             log.LogInformation($"User tried to update product:\n Name: {name} \n Description: {Desc} \n Price: {Value} ");
 
-            var database = client.GetDatabase("CrudProject");
+            // var database = client.GetDatabase("CrudProject");
 
-            var collection = database.GetCollection<BsonDocument>("user");
+            // var collection = database.GetCollection<BsonDocument>("user");
 
             var filter = Builders<BsonDocument>.Filter.Eq("Name", name);
             
@@ -169,9 +171,9 @@ namespace Products
         {
             log.LogInformation($"User Wants to delete product {name} ");
 
-            var database = client.GetDatabase("CrudProject");
+            // var database = client.GetDatabase("CrudProject");
 
-            var collection = database.GetCollection<BsonDocument>("user");
+            // var collection = database.GetCollection<BsonDocument>("user");
 
             var filter = Builders<BsonDocument>.Filter.Eq("Name", name);
             
