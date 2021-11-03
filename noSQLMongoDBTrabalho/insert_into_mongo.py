@@ -1,7 +1,7 @@
 from mongoengine import *
 from sortstuffout import select_delete_candidates, select_insert_candidates
 
-connect(host='mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/Repositories')
+connect(host='mongodb+srv://oiojoio:@repositories.d2klp.mongodb.net/Repositories')
 
 class User(Document):
     Usuario = StringField()
