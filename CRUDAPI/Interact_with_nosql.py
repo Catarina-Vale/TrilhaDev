@@ -1,6 +1,6 @@
 from mongoengine import *
 from flask import Response
-connect(host='mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/CrudProject')
+connect(host='mongodb+srv://oiojoio:@repositories.d2klp.mongodb.net/CrudProject')
 
 class User(Document):
     Name = StringField()
