@@ -2,7 +2,7 @@ from pymongo import MongoClient
 
 from sortstuffout import select_delete_candidates, select_insert_candidates
 
-client = MongoClient("mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://oiojoio:@repositories.d2klp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 db = client.get_database('Repositories')
 
