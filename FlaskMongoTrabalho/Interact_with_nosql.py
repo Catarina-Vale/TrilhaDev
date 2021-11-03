@@ -1,7 +1,7 @@
 from mongoengine import *
 from flask import Response
 from conection import connect_and_provide
-connect(host='mongodb+srv://oiojoio:blabla89@repositories.d2klp.mongodb.net/FlaskProject')
+connect(host='mongodb+srv://oiojoio:@repositories.d2klp.mongodb.net/FlaskProject')
 
 class User(Document):
     Usuario = StringField()
